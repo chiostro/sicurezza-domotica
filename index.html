@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <img src="logo.png" alt="Logo" style="height: 40px; position: absolute; top: 10px; left: 10px;">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistema di Sicurezza Domotica - Raspberry Pi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1em 0;
+      text-align: center;
+      position: relative;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      margin-top: 20px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #333;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+    }
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+    }
+    .language-flag {
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+    }
+    .language-flag:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="language-switcher">
+    <img src="https://flagcdn.com/w20/it.png" alt="Italiano" class="language-flag" onclick="changeLanguage('it')">
+    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag" onclick="changeLanguage('en')">
+    <img src="https://flagcdn.com/w20/th.png" alt="ไทย" class="language-flag" onclick="changeLanguage('th')">
+  </div>
+  <h1 id="header-title">Sistema Sicurezza e Domotica su Raspberry Pi</h1>
+  <p id="header-subtitle">Controllo videosorveglianza, allarmi e cancello – tutto da remoto</p>
+</header>
+
+<!-- Sezione Italiano -->
+<div id="it">
+  <section>
+    <h2>Funzionalità principali</h2>
+    <ul>
+      <li>Monitoraggio CCTV in tempo reale (4 telecamere)</li>
+      <li>Controllo apertura/chiusura cancello</li>
+      <li>Attivazione/disattivazione allarme</li>
+      <li>Accesso remoto tramite VNC sicuro</li>
+      <li>Sistema IDS/IPS con tracciamento eventi</li>
+      <li>Notifiche email per accessi falliti e riusciti</li>
+      <li>Console dedicata per log e analisi</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Sistema CCTV Locale – Nessun Cloud, Massima Privacy</h2>
+    <p>
+      Il sistema CCTV utilizza un dispositivo esterno con 4 telecamere  (costo circa 50€), collegato direttamente al Raspberry Pi via cavo LAN. 
+      I flussi video vengono catturati tramite comandi VLC, senza passaggi su Internet o servizi cloud. 
+      Lo streaming viene proposto in una pagina web interna, sicura e consultabile anche da remoto tramite accesso autenticato.
+    </p>
+    <p><strong>Vantaggi:</strong></p>
+    <ul>
+      <li>Massima privacy: nessun dato va su cloud</li>
+      <li>Streaming fluido e affidabile in rete locale</li>
+      <li>Facile visualizzazione da browser o pannello</li>
+      <li>Compatibilità con molte telecamere IP economiche</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Perché scegliere questo sistema?</h2>
+    <p>È una soluzione completa, leggera, personalizzabile e a basso costo per chi vuole sicurezza reale e controllo totale della propria abitazione o sede da remoto. Tutto su Raspberry Pi.</p>
+  </section>
+
+  <section>
+    <h2>Richiedi una Demo o Maggiori Info</h2>
+    <p>Contattami per ottenere una demo o il kit pronto all'uso:</p>
+    <ul>
+      <li>Email: <strong>cyberseconspace@protonmail.com</strong></li>
+      <li>GitHub/Portfolio: <strong>github.com/chiostro</strong></li>
+    </ul>
+  </section>
+</div>
+
+<!-- Sezione Inglese -->
+<div id="en" style="display:none">
+  <section>
+    <h2>Main Features</h2>
+    <ul>
+      <li>Real-time CCTV monitoring (4 cameras)</li>
+      <li>Gate open/close control</li>
+      <li>Alarm activation/deactivation</li>
+      <li>Remote access via secure VNC</li>
+      <li>IDS/IPS system with event tracking</li>
+      <li>Email notifications for failed/successful access</li>
+      <li>Dedicated console for logs and analysis</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Local CCTV System – No Cloud, Maximum Privacy</h2>
+    <p>
+      The CCTV system uses an external device with 4 cameras (cost about €50), connected directly to the Raspberry Pi via LAN cable.
+      Video streams are captured via VLC commands, without passing through the Internet or cloud services.
+      Streaming is provided on an internal web page, secure and accessible remotely via authenticated access.
+    </p>
+    <p><strong>Advantages:</strong></p>
+    <ul>
+      <li>Maximum privacy: no data goes to the cloud</li>
+      <li>Smooth and reliable streaming on local network</li>
+      <li>Easy viewing from browser or panel</li>
+      <li>Compatibility with many affordable IP cameras</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Why choose this system?</h2>
+    <p>It's a complete, lightweight, customizable and low-cost solution for those who want real security and total control of their home or office remotely. All on Raspberry Pi.</p>
+  </section>
+
+  <section>
+    <h2>Request a Demo or More Info</h2>
+    <p>Contact me for a demo or the ready-to-use kit:</p>
+    <ul>
+      <li>Email: <strong>cyberseconspace@protonmail.com</strong></li>
+      <li>GitHub/Portfolio: <strong>github.com/chiostro</strong></li>
+    </ul>
+  </section>
+</div>
+
+<!-- Sezione Thailandese -->
+<div id="th" style="display:none">
+  <section>
+    <h2>คุณสมบัติหลัก</h2>
+    <ul>
+      <li>การตรวจสอบกล้องวงจรปิดแบบเรียลไทม์ (4 กล้อง)</li>
+      <li>ควบคุมการเปิด/ปิดประตู</li>
+      <li>เปิด/ปิดการทำงานของระบบเตือนภัย</li>
+      <li>การเข้าถึงระยะไกลผ่าน VNC ที่ปลอดภัย</li>
+      <li>ระบบ IDS/IPS พร้อมติดตามเหตุการณ์</li>
+      <li>การแจ้งเตือนทางอีเมลสำหรับการเข้าถึงที่ล้มเหลวและสำเร็จ</li>
+      <li>คอนโซลเฉพาะสำหรับบันทึกและการวิเคราะห์</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>ระบบกล้องวงจรปิดภายในพื้นที่ – ไม่ใช้คลาวด์ ความเป็นส่วนตัวสูงสุด</h2>
+    <p>
+      ระบบ CCTV ใช้อุปกรณ์ภายนอกกับกล้อง 4 ตัว (ราคาประมาณ 50 ยูโร) เชื่อมต่อโดยตรงกับ Raspberry Pi ผ่านสาย LAN
+      สตรีมวิดีโอจะถูกจับผ่านคำสั่ง VLC โดยไม่ผ่านอินเทอร์เน็ตหรือบริการคลาวด์
+      สตรีมมิ่งจะแสดงในหน้าเว็บภายในที่ปลอดภัยและสามารถเข้าถึงได้จากระยะไกลผ่านการเข้าถึงที่ได้รับการรับรอง
+    </p>
+    <p><strong>ข้อดี:</strong></p>
+    <ul>
+      <li>ความเป็นส่วนตัวสูงสุด: ไม่มีข้อมูลไปที่คลาวด์</li>
+      <li>สตรีมมิ่งที่ราบรื่นและเชื่อถือได้ในเครือข่ายท้องถิ่น</li>
+      <li>ดูง่ายจากเบราว์เซอร์หรือแผงควบคุม</li>
+      <li>ความเข้ากันได้กับกล้อง IP ราคาประหยัดหลายรุ่น</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>ทำไมต้องเลือกระบบนี้?</h2>
+    <p>มันเป็นโซลูชันที่สมบูรณ์ น้ำหนักเบา สามารถปรับแต่งได้และราคาถูกสำหรับผู้ที่ต้องการความปลอดภัยจริงและควบคุมบ้านหรือสำนักงานจากระยะไกลได้ทั้งหมด ทุกอย่างอยู่บน Raspberry Pi</p>
+  </section>
+
+  <section>
+    <h2>ขอทดลองใช้หรือข้อมูลเพิ่มเติม</h2>
+    <p>ติดต่อฉันเพื่อขอทดลองใช้หรือชุดพร้อมใช้งาน:</p>
+    <ul>
+      <li>อีเมล: <strong>cyberseconspace@protonmail.com</strong></li>
+      <li>GitHub/Portfolio: <strong>github.com/chiostro</strong></li>
+    </ul>
+  </section>
+</div>
+
+<footer>
+  <p>&copy; 2025 - Sistema Sicurezza Pi</p>
+</footer>
+
+<script>
+  function changeLanguage(lang) {
+    localStorage.setItem("language", lang);
+    document.getElementById('it').style.display = lang === 'it' ? 'block' : 'none';
+    document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+    document.getElementById('th').style.display = lang === 'th' ? 'block' : 'none';
+    
+    // Aggiorna titolo e sottotitolo in base alla lingua
+    if (lang === 'it') {
+      document.getElementById('header-title').textContent = 'Sistema Sicurezza e Domotica su Raspberry Pi';
+      document.getElementById('header-subtitle').textContent = 'Controllo videosorveglianza, allarmi e cancello – tutto da remoto';
+    } else if (lang === 'en') {
+      document.getElementById('header-title').textContent = 'Home Security and Automation System on Raspberry Pi';
+      document.getElementById('header-subtitle').textContent = 'CCTV, alarms and gate control – all remotely';
+    } else if (lang === 'th') {
+      document.getElementById('header-title').textContent = 'ระบบความปลอดภัยและอัตโนมัติในบ้านบน Raspberry Pi';
+      document.getElementById('header-subtitle').textContent = 'ควบคุมกล้องวงจรปิด ระบบเตือนภัยและประตู – ทั้งหมดจากระยะไกล';
+    }
+  }
+
+  window.onload = function() {
+    const savedLang = localStorage.getItem("language") || "it";
+    changeLanguage(savedLang);
+  };
+</script>
+
+</body>
+</html>
